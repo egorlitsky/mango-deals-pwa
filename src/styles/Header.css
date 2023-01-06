@@ -1,0 +1,34 @@
+.header-container {
+    height: 10vh;
+    width: 100%;
+    background-color: var(--mango-bg);
+    display: grid;
+    gap: calc(var(--padding) * 2);
+    grid-template-columns: var(--logo-height) auto calc(var(--logo-height) * 3);
+    grid-template-areas: 'a b c';
+    align-items: center;
+}
+
+.header-app-name {
+    grid-area: b;
+    font-weight: lighter;
+    color: white;
+}
+
+.header-logo {
+    grid-area: a;
+    height: var(--logo-height);
+    padding-left: var(--padding);
+    float: left;
+}
+
+.header-button {
+    grid-area: c;
+    margin-right: var(--padding);
+    height: 50%;
+    color: white;
+    border-color: var(--mango-dark-blue);
+    border-radius: 6px;
+    background-color: var(--mango-blue);
+    font-weight: bold;
+}

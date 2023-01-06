@@ -1,0 +1,31 @@
+.deals-table {
+    width: 100%;
+    height: 40vh;
+    background-color: var(--mango-bg);
+    overflow: auto;
+}
+
+.deals-table table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.deals-table th {
+    text-align: left;
+    color: white;
+    border-bottom: solid 1px var(--mango-table-border);
+    padding-left: var(--padding);
+}
+
+.deals-table tr {
+    height: 2.5em;
+}
+
+.deals-table td {
+    text-align: left;
+    color: var(--mango-table-text);
+    background-color: var(--mango-table-bg);
+    border-bottom: solid 1px var(--mango-table-border);
+    padding-left: var(--padding);
+}

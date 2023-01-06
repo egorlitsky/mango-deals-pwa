@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mango-bg);
+    height: 10vh;
+}
+
+.footer > button {
+    height: 50%;
+    color: var(--mango-blue);
+    border: none;
+    border-radius: 6px;
+    background-color: var(--mango-dark-blue);
+    font-weight: bold;
+}

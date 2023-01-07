@@ -7,8 +7,9 @@ interface IDealsChartProps {
     smoothCurves?: boolean;
 }
 
-const CHART_HEIGHT = 400;
-const CHART_WIDTH = 500;
+// size we will base out chart on
+const CHART_HEIGHT = window.innerHeight * 0.4;
+const CHART_WIDTH = window.innerWidth;
 
 const CHART_TOP = 0;
 const CHART_BOTTOM = CHART_HEIGHT;

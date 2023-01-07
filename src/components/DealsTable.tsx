@@ -8,12 +8,16 @@ interface IDealsTableProps {
 const DealsTable = (props: IDealsTableProps) => {
     const { data } = props;
 
+    const formatValue = (value: number): string => {
+        return String(Number.parseFloat(`${value}`).toFixed(2));
+    };
+
     const formatDate = (date: Date): string => {
-        return date.toLocaleString('en-US', {
+        return date.toLocaleString('en-GB', {
             dateStyle: 'medium',
             timeStyle: 'medium',
             hour12: false
-        });
+        }).replace(',', '');
     };
 
     return (
@@ -29,7 +33,7 @@ const DealsTable = (props: IDealsTableProps) => {
                     {data?.map((item) => {
                         return (
                             <tr key={item.id}>
-                                <td>{item.value}</td>
+                                <td className="deals-table-value">{formatValue(item.value)}</td>
                                 <td>{formatDate(item.date)}</td>
                             </tr>
                         );

@@ -1,3 +1,5 @@
+import React, {useState} from 'react';
+
 import './App.css';
 
 import Header from './components/Header';
@@ -11,6 +13,9 @@ import './styles/DealsTable.css';
 
 import Foooter from './components/Footer';
 import './styles/Footer.css';
+
+import NewDealModal from './components/NewDealModal';
+import './styles/NewDealModal.css';
 
 import { IDeal } from './components/interfaces';
 import { DATA_PAGE_SIZE } from './components/constants';
@@ -28,12 +33,18 @@ for (let i = 0; i < 100; i++) {
 function App() {
     const data = generatedData.slice(-DATA_PAGE_SIZE);
 
+    const [isModalDisplayed, setIsModalDisplayed] = useState(false);
+
     return (
         <>
-            <Header />
-            <DealsChart data={data} smoothCurves={true} />
-            <DealsTable data={data} />
-            <Foooter />
+            <div className={isModalDisplayed ? 'blur-bg' : ''}>
+                <Header onNewDealButtonClick={() => setIsModalDisplayed(true)} />
+                <DealsChart data={data} smoothCurves={true} />
+                <DealsTable data={data} />
+                <Foooter />
+            </div>
+
+            {isModalDisplayed && <NewDealModal onClose={() => setIsModalDisplayed(false)} />}
         </>
     );
 }

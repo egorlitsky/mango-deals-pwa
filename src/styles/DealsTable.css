@@ -24,8 +24,12 @@
 
 .deals-table td {
     text-align: left;
-    color: var(--mango-table-text);
-    background-color: var(--mango-table-bg);
+    color: var(--mango-text);
+    background-color: var(--mango-alt-bg);
     border-bottom: solid 1px var(--mango-table-border);
     padding-left: var(--padding);
+}
+
+.deals-table-value {
+    font-weight: bold;
 }

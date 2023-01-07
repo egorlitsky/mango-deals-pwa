@@ -25,10 +25,4 @@
 .header-button {
     grid-area: c;
     margin-right: var(--padding);
-    height: 50%;
-    color: white;
-    border-color: var(--mango-dark-blue);
-    border-radius: 6px;
-    background-color: var(--mango-blue);
-    font-weight: bold;
 }

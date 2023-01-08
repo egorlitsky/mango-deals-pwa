@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
-import { DATA_PAGE_SIZE } from './constants';
-import { IDeal } from './interfaces';
+import { DATA_PAGE_SIZE } from '../constants/DealsConstants';
+import { IDeal } from '../interfaces/DealsInterfaces';
 
 interface IDealsChartProps {
     data: IDeal[];
     smoothCurves?: boolean;
 }
 
-// size we will base out chart on
+// size we will base our chart on
 const CHART_HEIGHT = window.innerHeight * 0.4;
 const CHART_WIDTH = window.innerWidth;
 
@@ -16,6 +16,8 @@ const CHART_BOTTOM = CHART_HEIGHT;
 
 const CHART_LEFT = 0;
 const CHART_RIGHT = CHART_WIDTH;
+
+const CHART_DOT_SIZE = 3;
 
 const DealsChart = ({ data, smoothCurves = true }: IDealsChartProps) => {
     const drawHorizontalGridLines = (
@@ -110,8 +112,8 @@ const DealsChart = ({ data, smoothCurves = true }: IDealsChartProps) => {
                 context.quadraticCurveTo(cpx1, y1, xMedian, yMedian);
                 context.quadraticCurveTo(cpx2, y2, x2, y2);
 
-                context.fillRect(x1, y1, 2, 5);
-                context.fillRect(x2, y2, 2, 5);
+                context.fillRect(x1, y1, CHART_DOT_SIZE, CHART_DOT_SIZE);
+                context.fillRect(x2, y2, CHART_DOT_SIZE, CHART_DOT_SIZE);
             }
         } else {
             for (let i = 1; i < length; i++) {
@@ -122,7 +124,7 @@ const DealsChart = ({ data, smoothCurves = true }: IDealsChartProps) => {
                     CHART_TOP;
 
                 context.lineTo(x, y);
-                context.fillRect(x, y, 2, 5);
+                context.fillRect(x, y, CHART_DOT_SIZE, CHART_DOT_SIZE);
             }
         }
 

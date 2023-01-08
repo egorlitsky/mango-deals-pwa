@@ -46,6 +46,7 @@ button {
 }
 
 .blur-bg {
+    pointer-events: none;
     filter: blur(20px);
 }
 

@@ -11,6 +11,24 @@
     flex-direction: column;
 }
 
+.new-deal-modal-container.close{
+    animation: bounce-out 0.5s ease-in;
+}
+
+.new-deal-modal-container.open{
+    animation: bounce-in 0.5s ease-in;
+}
+
+@keyframes bounce-in{
+    0%    {opacity: 0;   transform: scale(0.5);}
+    100%  {opacity: 1;   transform: scale(1);}
+}
+
+@keyframes bounce-out{
+    0%    {opacity: 1;   transform: scale(1);}
+    100%  {opacity: 0;   transform: scale(0.5);}
+}
+
 .new-deal-modal-body {
     padding: calc(var(--padding) * 2);
     display: grid;
@@ -27,6 +45,7 @@
 
 .new-deal-modal-header {
     grid-area: a;
+    text-align: center;
     margin-top: 0;
     color: white;
 }
@@ -67,4 +86,22 @@
 .new-deal-modal-proceed {
     width: fit-content;
     height: 35%;
+}
+
+.new-deal-modal-success-container {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-deal-modal-success-img {
+    width: 150px;
+    margin-bottom: var(--padding);
+}
+
+.new-deal-modal-success-text {
+    text-align: center;
+    grid-area: unset;
 }

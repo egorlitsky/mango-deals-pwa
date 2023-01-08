@@ -1,5 +1,5 @@
 import React from 'react';
-import { IDeal } from './interfaces';
+import { IDeal } from '../interfaces/DealsInterfaces';
 
 interface IDealsTableProps {
     data: IDeal[];
@@ -17,7 +17,7 @@ const DealsTable = (props: IDealsTableProps) => {
             dateStyle: 'medium',
             timeStyle: 'medium',
             hour12: false
-        }).replace(',', '');
+        }).replace(',', '').replace('at ', '');
     };
 
     return (

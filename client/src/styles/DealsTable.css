@@ -18,6 +18,12 @@
     padding-left: var(--padding);
 }
 
+.deals-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: var(--mango-bg);
+}
+
 .deals-table tr {
     height: 2.5em;
 }

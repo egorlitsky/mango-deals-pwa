@@ -67,7 +67,7 @@ const Main = (): ReactElement => {
                 <Header onNewDealButtonClick={onNewDealButtonClick} />
                 <DealsChart
                     data={data}
-                    smoothCurves={false}
+                    smoothCurves={true}
                     hoveredDealId={hoveredDealId}
                 />
                 <DealsTable

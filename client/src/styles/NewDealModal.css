@@ -34,7 +34,7 @@
     display: grid;
     gap: var(--padding);
     grid-template-rows: auto auto auto auto auto;
-    grid-template-columns: auto 25px;
+    grid-template-columns: auto var(--close-icon-size);
     grid-template-areas: 
         "a b"
         "c c"
@@ -45,14 +45,13 @@
 
 .new-deal-modal-header {
     grid-area: a;
-    text-align: center;
     margin-top: 0;
     color: white;
 }
 
 .new-deal-modal-close {
     grid-area: b;
-    width: 25px;
+    width: var(--close-icon-size);
 }
 
 .new-deal-modal-date-label {

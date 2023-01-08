@@ -2,14 +2,17 @@
     --mango-blue: #3eaeff;
     --mango-dark-blue: #051f3275;
     --mango-bg: #343e4d;
+    --mango-highlight: #0e609bc3;
     --mango-alt-bg: #32373d7d;
     --mango-modal: #32373dab;
-    --mango-modal-footer: #2C333D;
+    --mango-modal-footer: #2c333d;
     --mango-text: #9aa5be;
     --mango-table-border: #52585eaa;
 
     --padding: 20px;
     --logo-height: 5vh;
+    --close-icon-size: 25px;
+    --delete-icon-size: 20px;
 
     --modal-border-radius: 25px;
     --modal-opacity: 90%;
@@ -54,7 +57,6 @@ button {
     color: white;
     border-color: var(--mango-dark-blue);
     background-color: var(--mango-blue);
-
 }
 
 .secondary-btn {

@@ -8,7 +8,7 @@
 .deals-table table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
+    table-layout: auto;
 }
 
 .deals-table th {
@@ -22,6 +22,18 @@
     height: 2.5em;
 }
 
+.deals-table tbody tr:hover {
+    background-color: var(--mango-dark-blue);
+}
+
+.deals-table tbody tr:hover td {
+    color: white !important;
+}
+
+.deals-table tbody tr:hover .deals-table-delete {
+    display: inline-block;
+}
+
 .deals-table td {
     text-align: left;
     color: var(--mango-text);
@@ -32,4 +44,23 @@
 
 .deals-table-value {
     font-weight: bold;
+}
+
+.deals-table-date-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto calc(var(--delete-icon-size) * 2);
+    grid-template-areas: 'a b';
+    align-items: center;
+}
+
+.deals-table-date {
+    grid-area: a;
+}
+
+.deals-table-delete {
+    grid-area: b;
+    height: var(--delete-icon-size);
+    width: var(----delete-icon-size);
+    display: none;
 }

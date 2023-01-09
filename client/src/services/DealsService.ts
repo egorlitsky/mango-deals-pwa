@@ -40,7 +40,7 @@ export const createDeal = async (value: number, date: Date) => {
 };
 
 /**
- * Sends a DELETE-qery to delete a deal.
+ * Sends a DELETE-query to delete a deal.
  * @param id id of the deal to delete
  */
 export const deleteDeal = async (id: string) => {

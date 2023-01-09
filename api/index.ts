@@ -6,7 +6,7 @@ import bodyParser from 'body-parser';
 import _ from 'lodash';
 
 /**
- * Some simple web-server, API, and DB to operate with Mango deals.
+ * Simple web-server, API, and JSON-based DB to operate with mango deals.
  */
 
 interface IDeal {
@@ -42,7 +42,7 @@ app.get('/deals', (req: Request, res: Response) => {
     if (_.isEmpty(pagesWithContent)) {
         res.send({ deals: [] });
     } else {
-        // the latest data is in the end
+        // the latest data is in the end so let's inverse an index
         const inversedIndex = pagesWithContent.length - requestedPage;
         const index = inversedIndex >= 0 ? inversedIndex : 0;
 

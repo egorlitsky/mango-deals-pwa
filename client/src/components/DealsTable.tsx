@@ -10,7 +10,7 @@ interface IDealsTableProps {
 }
 
 /**
- * Renders a table with deals. Allows to view, hightlight on a chart (hover event), and delete deals.
+ * Renders a table with deals. Allows to view, highlight on a chart (hover event), and delete deals.
  * @param props DealsTable props
  * @returns DealsTable React-element
  */

@@ -6,7 +6,10 @@ import {IDeal, IDealFromServer} from '../interfaces/DealsInterfaces';
  * @returns an array of IDeal instances
  */
 export const fetchDeals = async (page: number): Promise<IDeal[]> => {
-    const response = await fetch(`/api/deals?page=${page}`);
+    const response = await fetch(`https://api-olive-sigma.vercel.app/deals?page=${page}`,
+    {
+        mode: 'cors'
+    });
     const body = await response.json();
 
     if (response.status !== 200) {
@@ -27,8 +30,9 @@ export const fetchDeals = async (page: number): Promise<IDeal[]> => {
  * @param date date of the deal
  */
 export const createDeal = async (value: number, date: Date) => {
-    await fetch('/api/deal', {
+    await fetch('https://api-olive-sigma.vercel.app/deal', {
         method: 'POST',
+        mode: 'cors',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -44,7 +48,8 @@ export const createDeal = async (value: number, date: Date) => {
  * @param id id of the deal to delete
  */
 export const deleteDeal = async (id: string) => {
-    await fetch(`/api/deal/${id}`, {
-        method: 'DELETE'
+    await fetch(`https://api-olive-sigma.vercel.app/deal/${id}`, {
+        method: 'DELETE',
+        mode: 'cors'
     });
 };

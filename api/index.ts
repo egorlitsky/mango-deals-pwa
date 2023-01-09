@@ -5,6 +5,7 @@ import { v4 as uuid } from 'uuid';
 import bodyParser from 'body-parser';
 import _ from 'lodash';
 import * as dbjson from './db.json';
+import cors from 'cors';
 
 /**
  * Some simple web-server, API, and DB to operate with Mango deals.
@@ -25,6 +26,7 @@ const DATA_PAGE_SIZE = 10;
 const app: Express = express();
 const port = 5000;
 app.use(bodyParser.json());
+app.use(cors());
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 const db: LowSync<IDB> = new LowSync<IDB>(new JSONFileSync('db.json'));
@@ -58,7 +60,7 @@ app.post('/api/deal', (req: Request, res: Response) => {
     }
 
     db.write();
-    res.redirect('/');
+    res.send();
 });
 
 app.delete('/api/deal/:id', (req: Request, res: Response) => {

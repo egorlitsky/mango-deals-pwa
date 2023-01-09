@@ -3,7 +3,7 @@
         "target": "es6",
         "module": "es6",
         "moduleResolution": "nodenext",
-        "outDir": "./dist",
+        "outDir": "./public",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,

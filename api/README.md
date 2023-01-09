@@ -1,6 +1,6 @@
 # Mango Deals API
 
-Simple Express web-server, API, and DB (powered by the lowdb) to operate with Mango deals.
+Simple Express web-server, API, and DB (powered by the lowdb) to operate with mango deals.
 
 ### Installing dependencies
 
@@ -14,4 +14,4 @@ npm install
 npm start
 ```
 
-The server is listening on a port 5000.
+The server is listening on a port `5000`.

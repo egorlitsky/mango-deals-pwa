@@ -1,7 +1,19 @@
-# Mango Deals
+# Mango Deals client
 
-Express + React + TypeScript + Canvas web-application to display and manage Mango deals.
+React + TypeScript + Canvas web-application to display Mango deals using a table and chart.
+Allows to view and manipulate Mango deals.
+Communicates with the server.
 
-Consists of 2 parts:
-1) `api` - backend, Express web-server and API
-2) `client` - fronetnd, React web app
+### Installing dependencies
+
+```
+npm install
+```
+
+### Starting the web application
+
+```
+npm start
+```
+
+It's available by `http://localhost:3000` in your favorite browser.

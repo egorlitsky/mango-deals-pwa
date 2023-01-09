@@ -6,7 +6,7 @@ import {IDeal, IDealFromServer} from '../interfaces/DealsInterfaces';
  * @returns an array of IDeal instances
  */
 export const fetchDeals = async (page: number): Promise<IDeal[]> => {
-    const response = await fetch(`/deals?page=${page}`);
+    const response = await fetch(`/api/deals?page=${page}`);
     const body = await response.json();
 
     if (response.status !== 200) {
@@ -27,7 +27,7 @@ export const fetchDeals = async (page: number): Promise<IDeal[]> => {
  * @param date date of the deal
  */
 export const createDeal = async (value: number, date: Date) => {
-    await fetch('/deal', {
+    await fetch('/api/deal', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ export const createDeal = async (value: number, date: Date) => {
  * @param id id of the deal to delete
  */
 export const deleteDeal = async (id: string) => {
-    await fetch(`/deal/${id}`, {
+    await fetch(`/api/deal/${id}`, {
         method: 'DELETE'
     });
 };

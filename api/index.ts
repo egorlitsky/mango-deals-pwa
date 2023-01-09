@@ -4,6 +4,7 @@ import { JSONFileSync } from 'lowdb/node';
 import { v4 as uuid } from 'uuid';
 import bodyParser from 'body-parser';
 import _ from 'lodash';
+import * as dbjson from './db.json';
 
 /**
  * Some simple web-server, API, and DB to operate with Mango deals.
@@ -30,7 +31,7 @@ const db: LowSync<IDB> = new LowSync<IDB>(new JSONFileSync('db.json'));
 db.read();
 db.write();
 
-app.get('/deals', (req: Request, res: Response) => {
+app.get('/api/deals', (req: Request, res: Response) => {
     db.read();
 
     // parse the requested page of the data
@@ -50,7 +51,7 @@ app.get('/deals', (req: Request, res: Response) => {
     }
 });
 
-app.post('/deal', (req: Request, res: Response) => {
+app.post('/api/deal', (req: Request, res: Response) => {
     if (db && db.data) {
         // generate some ID and push a new instance
         db.data.deals.push({ id: uuid(), ...req.body });
@@ -60,7 +61,7 @@ app.post('/deal', (req: Request, res: Response) => {
     res.redirect('/');
 });
 
-app.delete('/deal/:id', (req: Request, res: Response) => {
+app.delete('/api/deal/:id', (req: Request, res: Response) => {
     const id = req.params.id;
 
     if (id && db && db.data) {
@@ -71,3 +72,5 @@ app.delete('/deal/:id', (req: Request, res: Response) => {
     db.write();
     res.send();
 });
+
+export default app

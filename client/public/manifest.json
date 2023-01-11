@@ -1,0 +1,30 @@
+{
+  "short_name": "Mango Deals",
+  "name": "Mango Deals PWA",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "72x62",
+      "type": "image/png"
+    },
+    {
+      "src": "close.png",
+      "type": "image/png",
+      "sizes": "40x41"
+    },
+    {
+        "src": "delete.png",
+        "type": "image/png",
+        "sizes": "36x36"
+      },
+    {
+      "src": "check.png",
+      "type": "image/png",
+      "sizes": "292x292"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#343E4D",
+  "background_color": "#343e4d"
+}

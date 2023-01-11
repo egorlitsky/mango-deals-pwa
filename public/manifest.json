@@ -10,17 +10,17 @@
     {
       "src": "close.png",
       "type": "image/png",
-      "sizes": "25x25"
+      "sizes": "40x41"
     },
     {
         "src": "delete.png",
         "type": "image/png",
-        "sizes": "20x20"
+        "sizes": "36x36"
       },
     {
       "src": "check.png",
       "type": "image/png",
-      "sizes": "150x150"
+      "sizes": "292x292"
     }
   ],
   "start_url": ".",
